@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+{% block content %}
+    <div>
+        <h1>Dictionary</h1>
+        <form action="/word_counter" method="post">
+            <label for="text">Enter Text:</label><br>
+        
+            <textarea name="Enter Text" id="Text" cols="100" rows="10" onchange="myFunction(this.value)">Enter Text</textarea><br><br>
+            
+            <button type="submit" name="sub" value="sub">Submit</button>
+            <button type="reset">Clear</button>
+        
+        </form>
+    </div>
+    <h3>Output</h3>
+        {{ sent_freq }} <br><br>
+        {{ word_freq }}
+
+
+
+
+
+{% endblock %}

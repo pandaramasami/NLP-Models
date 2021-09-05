@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+{% block content %}
+    <div>
+        <h1>Singular Plural Conversion</h1>
+        <form action="/singplu" method="post">
+            <label for="text">Enter Text:</label><br>
+        
+            <input type="text" name="Enter text" placeholder="Enter text" required='required' value="{{ request.form['Enter text'] }}"><br><br>
+            <label for="">Enter the place of the word to convert</label><br>
+            <input type="number" name="Enter which word" required='required' value="{{ request.form['Enter which word'] }}"><br><br>
+            <button type="submit" name="singular" value="Singular">Singular</button>
+            <button type="submit" name="plural" value="Plural">Plural</button>
+        
+        </form>
+    </div>
+
+    <h3>Output</h3>
+        {{ output}}
+
+
+
+
+
+
+{% endblock %}

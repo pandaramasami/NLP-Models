@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <div class="nav">
+          
+
+            <a href="{{ url_for('word_counter') }}">Word Counter</a>
+            <a href="{{ url_for('lang') }}">Language Transalation & Detection</a>
+            <a href="{{ url_for('word_dict') }}">Word Dictionary</a>
+            <a href="{{ url_for('spell_corr') }}">Spell Correction</a>
+            <a href="{{ url_for('sing_plu') }}">Singular Plural</a>
+
+               
+        </div>
+ 
+        
+        <div class="main">
+            <h1> NLP Models</h1>
+            {%block content%}
+            {%endblock%}
+        </div> 
+
+    
+
+        
+    </body>
+</html>

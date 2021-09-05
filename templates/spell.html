@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+{% block content %}
+    <div>
+        <h1>Spell Correction</h1>
+        <form action="/spellcorr" method="post">
+        
+            <input type="text" name="Enter text" placeholder="Enter text" required='required' value="{{ request.form['Enter text'] }}"><br><br>
+            <button type="submit" name="spell" value="spell">Spell Correct</button>
+            <button type="reset" name="reset" value="reset">Clear</button>        
+         
+        </form>
+        <h3>Output</h3>
+        {{ inp }} <br><br>
+        {{ output }}
+    </div>
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+{% block content %}
+    <div>
+        <h1>Dictionary</h1>
+        <form action="/worddict" method="post">
+            <label for="text">Enter the word:</label>
+            <input type="text" name="Enter the word" placeholder="word" required = 'required' value="{{ request.form['Enter the word'] }}"><br><br>
+            
+            <button type="submit">Submit</button>
+        
+        </form>
+        <h3>Output</h3>
+        {{ output }}
+        
+    </div>
+
+
+
+
+
+
+{% endblock %}
