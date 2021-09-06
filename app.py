@@ -2,6 +2,12 @@ from flask import Flask, render_template, request
 from textblob import TextBlob, Word
 import nltk
 
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('stopwords')
+nltk.download('words')
+nltk.download('wordnet')
+
 #Initialize the app
 app = Flask(__name__)
 
